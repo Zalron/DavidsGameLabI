@@ -12,19 +12,19 @@ public class CameraMovement : MonoBehaviour
 	}
 	void Update () // Update is called once per frame
     {
-        if (Input.GetKeyDown(KeyCode.W))
+		if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             transform.position += (Vector3.up) * movementSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.A))
+		if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.position += (Vector3.left) * movementSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.S))
+		if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.position += (Vector3.down) * movementSpeed;
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             transform.position += (Vector3.right) * movementSpeed;
         }
