@@ -19,26 +19,29 @@ public class UI : MonoBehaviour
 	}
 	void Update () // Update is called once per frame
 	{
-		if (Input.GetKey (KeyCode.Q)) 
-		{
-			applesNum += 100;
-			applesText.text = "Apples:" + applesNum.ToString ();
-		}
-		if (Input.GetKey (KeyCode.W)) 
-		{
-			appleJuiceNum += 100;
-			appleJuiceText.text = "Apples Juice:" + appleJuiceNum.ToString ();
-		}
-		if (Input.GetKey (KeyCode.E)) 
-		{
-			powerNum += 100;
-			powerText.text = "Power:" + powerNum.ToString ();
-		}
-		if (Input.GetKey (KeyCode.R)) 
-		{
-			moneyNum += 100;
-			moneyText.text = "Money:" + moneyNum.ToString ();
-		}
-
+		
 	}
+    void LateUpdate() 
+    {
+        if (Input.GetKey(KeyCode.Q))
+        {
+            applesNum += 100;
+            applesText.text = "Apples:" + applesNum.ToString();
+        }
+        if (Input.GetKey(KeyCode.W))
+        {
+            appleJuiceNum += 100;
+            appleJuiceText.text = "Apples Juice:" + appleJuiceNum.ToString();
+        }
+        if (Input.GetKey(KeyCode.E))
+        {
+            powerNum += 100;
+            powerText.text = "Power:" + powerNum.ToString();
+        }
+        if (Input.GetKey(KeyCode.R))
+        {
+            moneyNum += 100;
+            moneyText.text = "Money:" + moneyNum.ToString();
+        }
+    }
 }
