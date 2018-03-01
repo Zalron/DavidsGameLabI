@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class BuildingGridPlacer : MonoBehaviour
 {
-    Grid grid;
+    public Grid grid;
+	public GameObject AdminBuilding;
     public float size = 1f;
     void Awake()
     {
@@ -19,6 +20,7 @@ public class BuildingGridPlacer : MonoBehaviour
             if (Physics.Raycast(ray, out hitInfo))
             {
                 PlaceBuildingNear(hitInfo.point);
+				Debug.Log("Hit!");
             }
         }
 	}
@@ -34,7 +36,7 @@ public class BuildingGridPlacer : MonoBehaviour
     public void PlaceBuildingNear(Vector3 clickPoint)
     {
         var finalPosition = GetNearestPointOnGrid(clickPoint);
-        GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
+		//GameObject.CreatePrimitive (PrimitiveType.Cube).transform.position = finalPosition;
     }
     void OnDrawGizmos()
     {
